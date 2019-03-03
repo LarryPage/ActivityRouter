@@ -78,7 +78,7 @@ public class Routers {
         boolean success = false;
         if (callback != null) {
             if (callback.beforeOpen(context, uri)) {
-                return false;
+                return false;// 是否拦截，true 拦截，false 不拦截
             }
         }
 
@@ -124,7 +124,7 @@ public class Routers {
         Path path = Path.create(uri);
         for (Mapping mapping : mappings) {
             if (mapping.match(path)) {
-                if (mapping.getActivity() == null) {
+                if (mapping.getActivity() == null) {//通过 url 调用方法
                     mapping.getMethod().invoke(context, mapping.parseExtras(uri));
                     return true;
                 }
