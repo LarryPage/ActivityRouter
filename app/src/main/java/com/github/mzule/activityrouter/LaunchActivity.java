@@ -33,9 +33,15 @@ public class LaunchActivity extends Activity {
                         intent.setData(Uri.parse(((TextView) view).getText().toString()));
                         startActivity(intent);
                         */
-                        // app内打开页面可以使用Routers.open(Context, Uri)
+                        // app内打开页面可以使用Routers.open(Context, String),Routers.open(Context, Uri)
                         // Routers.open(LaunchActivity.this, Uri.parse(((TextView) view).getText().toString()), ((RouterCallbackProvider) getApplication()).provideRouterCallback());
+                        // Routers.open(LaunchActivity.this, "mzule://main/0xff878798")
+                        // Routers.open(LaunchActivity.this, Uri.parse("mzule://main/0xff878798"))
                         Routers.openForResult(LaunchActivity.this, ((TextView) view).getText().toString(), Constant.REQUEST_CODE_DEMO);
+                        // Routers.openForResult(LaunchActivity.this, "mzule://main/0xff878798", REQUEST_CODE);
+                        // Routers.openForResult(LaunchActivity.this, Uri.parse("mzule://main/0xff878798"), REQUEST_CODE);
+                        // 获取 Intent
+                        // Intent intent = Routers.resolve(context, "mzule://main/0xff878798")
                     }
                 });
             }

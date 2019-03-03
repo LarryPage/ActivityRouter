@@ -28,9 +28,9 @@ ext {
 }
 
 dependencies {
-    compile 'com.squareup:javapoet:1.8.0'
-    compile 'com.google.auto.service:auto-service:1.0-rc3'
-    compile 'com.github.mzule.activityrouter:annotation:1.1.5'
+    implementation 'com.squareup:javapoet:1.8.0'
+    implementation 'com.google.auto.service:auto-service:1.0-rc3'
+    implementation 'com.github.mzule.activityrouter:annotation:1.1.5'
 }
 
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'

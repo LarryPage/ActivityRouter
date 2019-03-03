@@ -43,9 +43,9 @@ apply plugin: 'android-apt'
 dependencies {
     compile 'com.github.mzule.activityrouter:activityrouter:1.2.2'
     apt 'com.github.mzule.activityrouter:compiler:1.1.7'
-}
-
+                    }
 ```
+
 ### 2. 集成
 
 在`AndroidManifest.xml`配置
@@ -252,3 +252,5 @@ Apache License  2.0
 1. 新浪微博 http://weibo.com/mzule
 1. 个人博客 https://mzule.github.io/
 1. 邮件 "mzule".concat("4j").concat("@").concat("gmail.com")
+
+

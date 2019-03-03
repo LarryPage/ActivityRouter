@@ -14,6 +14,9 @@ public abstract class DumpExtrasActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // 支持获取原始 url 信息
+        // getIntent().getStringExtra(Routers.KEY_RAW_URL);
+
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             Set<String> keys = extras.keySet();

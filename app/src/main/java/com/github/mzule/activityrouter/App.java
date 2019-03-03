@@ -24,7 +24,12 @@ public class App extends Application implements RouterCallbackProvider {
                     context.startActivity(new Intent(context, LaunchActivity.class));
                     return true;
                 }
+                // 是否拦截，true 拦截，false 不拦截
                 return false;
+            }
+
+            @Override
+            public void afterOpen(Context context, Uri uri) {
             }
 
             @Override
